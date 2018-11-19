@@ -1,0 +1,52 @@
+Warning: Using a password on the command line interface can be insecure.
+--------------
+DROP DATABASE IF EXISTS app1
+--------------
+
+--------------
+DROP DATABASE IF EXISTS app2
+--------------
+
+--------------
+CREATE DATABASE app1
+--------------
+
+--------------
+CREATE TABLE message (
+			id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+			name VARCHAR(50) NOT NULL, 
+			message VARCHAR(256) NOT NULL,
+			time TIMESTAMP NOT NULL 
+		     )
+--------------
+
+--------------
+INSERT INTO message (name, message, time)
+VALUES 		    ('admin', 'Welcome!', '2018-11-10 19:24:11'),
+                    ('notMatt', 'hi everyone :)', '2018-11-10 19:24:13'),
+                    ('Matt', 'first!', '2018-11-10 19:24:15'),
+                    ('Matt', 'ah, f', '2018-11-10 19:24:27')
+--------------
+
+--------------
+CREATE DATABASE app2
+--------------
+
+--------------
+CREATE TABLE user (
+			id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+			first_name VARCHAR(50) NOT NULL, 
+			last_name VARCHAR(50) NOT NULL, 
+			city VARCHAR(15) NOT NULL, 
+			address VARCHAR(100) NOT NULL,
+			credit_card VARCHAR(16) NOT NULL,
+			password VARCHAR(100) NOT NULL
+		   )
+--------------
+
+--------------
+INSERT INTO user (first_name, last_name, city, address, credit_card, password)
+VALUES           ('Matt', 'Abado', 'London', '123 Fake Street', '5105105105105100', 'pword'),
+		 ('John', 'Doe', 'Windsor', '321 Real Road', '5555555555554444', 'ys65LyYFU24v97f3')
+--------------
+
